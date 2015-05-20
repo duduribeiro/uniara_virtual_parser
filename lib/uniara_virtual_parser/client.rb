@@ -1,4 +1,7 @@
 module UniaraVirtualParser
+  #
+  # This module handle the connections between all services and the UniaraVirtual server
+  #
   class Client
     ENDPOINT = 'http://virtual.uniara.com.br'
     class << self
