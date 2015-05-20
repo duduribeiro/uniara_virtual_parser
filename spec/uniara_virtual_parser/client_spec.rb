@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module UniaraVirtualParser
   describe Client do
-    before :each do
+    after :each do
       described_class.instance_variable_set :@client, nil
     end
 
