@@ -1,4 +1,3 @@
-require 'pry'
 module UniaraVirtualParser
   module Services
     module Login
