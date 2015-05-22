@@ -3,3 +3,4 @@ Documentation:
 AllCops:
   Exclude:
     - 'bin/*'
+    - 'spec/**/*'
