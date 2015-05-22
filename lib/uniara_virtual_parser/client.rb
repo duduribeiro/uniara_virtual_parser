@@ -10,6 +10,12 @@ module UniaraVirtualParser
       def_delegators :client, :post
       attr_accessor :token
 
+      def get_with_token(path)
+        client.get(path) do |request|
+          request.header[:cookie] = "PHPSESSID=#{token};"
+        end
+      end
+
       private
 
       def client
