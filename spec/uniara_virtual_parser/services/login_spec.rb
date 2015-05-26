@@ -18,13 +18,12 @@ module UniaraVirtualParser
           }
         end
 
-        it 'sets the token in the Client' do
+        it 'returns the token in the Client' do
           stub_request(:post, 'http://virtual.uniara.com.br/login')
             .with(body: body)
             .to_return(status: 200, body: '', headers: response_headers)
 
-          expect { described_class.login 'bruce', 'wayne' }
-            .to change(Client, :token)
+          expect(described_class.login 'bruce', 'wayne').to be
         end
       end
 

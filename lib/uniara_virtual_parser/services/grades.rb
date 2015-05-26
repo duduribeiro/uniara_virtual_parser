@@ -1,8 +1,8 @@
 module UniaraVirtualParser
   module Services
     module Grades
-      def grades
-        response = Client.get_with_token('/alunos/consultas/notas/')
+      def grades(token)
+        response = Client.get_with_token('/alunos/consultas/notas/', token)
         parse_grades response.body
       end
 

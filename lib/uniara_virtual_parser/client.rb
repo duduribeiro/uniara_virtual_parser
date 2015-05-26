@@ -8,9 +8,8 @@ module UniaraVirtualParser
     class << self
       extend Forwardable
       def_delegators :client, :post
-      attr_accessor :token
 
-      def get_with_token(path)
+      def get_with_token(path, token)
         client.get(path) do |request|
           request.header[:cookie] = "PHPSESSID=#{token};"
         end
