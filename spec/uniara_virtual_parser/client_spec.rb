@@ -9,8 +9,9 @@ module UniaraVirtualParser
     let(:client) { double(:client, post: true) }
 
     describe '.client' do
-      it 'create only one hurley_client object' do
+      it 'creates only one hurley_client object' do
         expect(Hurley::Client).to receive(:new).once { client }
+
         described_class.post '/batman'
         described_class.post '/batman'
       end
@@ -20,6 +21,7 @@ module UniaraVirtualParser
       it 'calls hurley_client and send the post' do
         expect(client).to receive(:post).with('/batman')
         allow(Hurley::Client).to receive(:new) { client }
+
         described_class.post '/batman'
       end
     end
