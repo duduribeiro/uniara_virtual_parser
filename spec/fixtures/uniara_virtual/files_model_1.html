@@ -1,0 +1,579 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+      <title>Uniara Virtual - Acadêmico > Consultas > Arquivos Disponíveis</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+      <meta name="Author" content="Weverton Velludo - wvelludo@uniara.com.br">
+      <meta name="Robots" CONTENT="noindex,nofollow">
+    <link type="image/x-icon" rel="shortcut icon" href="http://www.uniara.com.br/favicon.ico" />
+      <link rel="stylesheet" href="http://www.uniara.com.br/barra_navegacao.css" type="text/css">
+    <script type="text/javascript" src="http://www.uniara.com.br/barra_navegacao_virtual.js.php"></script>
+      <link href="/templates/alunos/css.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="/templates/alunos/ferramentas/js/jquery.js"></script>
+        <script type="text/javascript" src="/templates/alunos/ferramentas/js/jquery.jqDock.min.js"></script>
+        <script type="text/javascript" src="/templates/alunos/ferramentas/js/jquery-ui-1.8.15.custom.min.js"></script>
+        <link type="text/css" href="/templates/alunos/ferramentas/css/ui-lightness/jquery-ui-1.8.15.custom.css" rel="stylesheet" />
+    
+      <script src="/templates/js/generico.js" type="text/javascript"></script>
+      <script src="/templates/alunos/js/generico.js" type="text/javascript"></script>
+      <script src="/templates/js/mascaraHellas.js"></script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-9447697-1");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+      <script type="text/javascript">
+      
+      function tempolimite() {
+        if (atual != 0) {
+          document.getElementById('tlimite').innerHTML = "Tempo restante: <b>" + atual + "</b> min."
+          if (atual==2) {
+            if (pagina != "/index.php") {
+              document.getElementById('limite').innerHTML = "<table width='99%' align='center' border='0' cellpadding='3' cellspacing='1' bgcolor='#000000'><tr bgcolor='#0f3b4d'><td align='center'><font color='#FFFFFF'><b>ATENÇÃO</b></font></td></tr><tr bgcolor='#47778b'><td align=center><b>Sua sessão está chegando ao fim, salve as informações para evitar perda de dados.<BR>Você tem menos de 2 minutos para verificar e postar seus dados.</b></td></tr></table><BR>"
+              document.getElementById('limite2').innerHTML = "<BR><table width='99%' align='center' border='0' cellpadding='3' cellspacing='1' bgcolor='#000000'><tr bgcolor='#0f3b4d'><td align='center'><font color='#FFFFFF'><b>ATENÇÃO</b></font></td></tr><tr bgcolor='#47778b'><td align=center><b>Sua sessão está chegando ao fim, salve as informações para evitar perda de dados.<BR>Você tem menos de 2 minutos para verificar e postar seus dados.</b></td></tr></table><BR>"
+            }
+          }
+          atual-=1;
+        } else {
+          window.location="/login/";
+        }
+        setTimeout("tempolimite()",60000);
+        }
+        
+          // Institucional
+          var menu1=new Array()
+          menu1[0]='<div class=dropmenu style="width:100%">&nbsp;<b>Informações</b></div>'
+          menu1[1]='<a href="/alunos/institucional/reitor/" class=dropmenul target=_self>Palavra do Reitor</a>'
+          menu1[2]='<a href="http://www.uniara.com.br/institucional/a_uniara.php" class=dropmenul target=_blank>A Uniara</a>'
+          menu1[3]='<a href="http://www.uniara.com.br/atividades_culturais/" class=dropmenul target=_blank>Atividades Culturais</a>'
+          menu1[4]='<a href="http://www.uniara.com.br/esporte/" class=dropmenul target=_blank>Esporte</a>'
+          menu1[5]='<a href="http://www.uniara.com.br/revistauniara/default.asp" class=dropmenul target=_blank>Revista Uniara</a>'
+          menu1[6]='<a href="http://www.uniara.com.br/parque_do_basalto/" class=dropmenul target=_blank>Parque do Basalto</a>'
+          menu1[7]='<a href="http://www.uniara.com.br/ageuniara/" class=dropmenul target=_blank>Ageuniara</a>'
+          menu1[8]='<a href="http://www.uniara.com.br/guia_turistico/" class=dropmenul target=_blank>Guia de Araraquara</a>'
+          menu1[9]='<a href="http://www.uniara.com.br/visitavirtual/" class=dropmenul target=_blank>Visita Virtual</a>'
+  
+          // Uniara Virtual
+          var menu2=new Array()
+          menu2[0]='<div class=dropmenu style="width:100%">&nbsp;<b>Informações</b></div>'
+          menu2[1]='<a href="/alunos/virtual/apresentacao/" class=dropmenul target=_self>Apresentação</a>'
+          menu2[2]='<div class=dropmenu style="width:100%">&nbsp;<b>Contato</b></div>'
+          menu2[3]='<a href="/alunos/contato/criticas/" class=dropmenul target=_self>Críticas e Sugestões</a>'
+      menu2[4]='<div class=dropmenu style="width:100%">&nbsp;<b>Serviços</b></div>'
+      menu2[5]='<a href="/alunos/servicos/senha/" class=dropmenul target=_self>Alteração de Senha</a>'
+      
+          // Academico
+          var menu3=new Array()
+          menu3[0]='<div class=dropmenu style="width:100%">&nbsp;<b>Informações</b></div>'
+          menu3[1]='<a href="/alunos/informacoes/apresentacao/" class=dropmenul target=_self>Apresentação</a>'
+          menu3[2]='<a href="/alunos/informacoes/duvidas/" class=dropmenul target=_self>Dúvidas Freqüentes</a>'
+          //menu3[3]='<a href="#" onclick="javascript:guia();" class=dropmenul target=_self>Guia do Aluno</a>'
+          menu3[4]='<a href="http://www.uniara.com.br/graduacao/eng_computacao/" class=dropmenul target=_blank>Meu Curso</a>'
+          menu3[5]='<div class=dropmenu style="width:100%">&nbsp;<b>Consultas</b></div>'
+          menu3[6]='<a href="/alunos/consultas/disciplinas/" class=dropmenul target=_self>Disciplinas Matriculadas</a>'
+          menu3[7]='<a href="/alunos/consultas/dados/" class=dropmenul target=_self>Dados Cadastrais</a>'
+          menu3[8]='<a href="/alunos/consultas/horario/" class=dropmenul target=_self>Horário de Aula</a>'
+          menu3[9]='<a href="/alunos/consultas/atividades/" class=dropmenul target=_self>Atividades Complementares</a>'
+          menu3[10]='<a href="/alunos/consultas/historico/" class=dropmenul target=_self>Histórico Escolar</a>'
+          menu3[11]='<a href="/alunos/consultas/arquivos/" class=dropmenul target=_self>Arquivos Disponíveis</a>'
+          menu3[12]='<a href="/alunos/consultas/requerimentos/" class=dropmenul target=_self>Requerimentos</a>'
+          menu3[13]='<a href="/alunos/consultas/planoensino/" class=dropmenul target=_self>Planos de Ensino das Disciplinas</a>'
+          menu3[14]='<a href="/alunos/consultas/calendario/" class=dropmenul target=_self>Calendário Acadêmico</a>'
+          menu3[15]='<a href="/alunos/consultas/notas/" class=dropmenul target=_self>Registro de Notas</a>'
+          menu3[16]='<a href="/alunos/consultas/faltas/" class=dropmenul target=_self>Registro de Faltas</a>'
+
+              
+
+          //menu3[17]='<a href="/alunos/consultas/mensagens/" class=dropmenul target=_self>Caixa de Mensagens</a>'
+
+          menu3[18]='<div class=dropmenu style="width:100%">&nbsp;<b>Serviços</b></div>'
+          menu3[19]='<a href="/alunos/servicos/dados/" class=dropmenul target=_self>Alteração de Cadastro</a>'
+          menu3[20]='<a href="/alunos/servicos/biblioteca/" class=dropmenul target=_self>Biblioteca</a>'
+          menu3[21]='<a href="/alunos/servicos/requerimentos/" class=dropmenul target=_self>Solicitação de Requerimentos</a>'
+          menu3[22]='<a href="/alunos/servicos/matricula/" class=dropmenul target=_self>Matrícula On-line</a>'      
+          menu3[23]='<div class=dropmenu style="width:100%">&nbsp;<b>Contato</b></div>'
+          menu3[24]='<a href="/alunos/contato/central/" class=dropmenul target=_self>Central de Atendimento</a>'        
+                menu3[25]='<a href="/alunos/servicos/coordenador/" class=dropmenul target=_self>Fale com seu coordenador</a>'
+              
+  
+          // Financeiro
+          var menu4=new Array()
+          menu4[0]='<div class=dropmenu style="width:100%">&nbsp;<b>Informações</b></div>'
+          menu4[1]='<a href="/alunos/financeiro/apresentacao/" class=dropmenul target=_self>Apresentação</a>'
+          menu4[2]='<a href="/alunos/financeiro/duvidas/" class=dropmenul target=_self>Dúvidas Freqüentes</a>'
+          menu4[3]='<div class=dropmenu style="width:100%">&nbsp;<b>Consultas</b></div>'
+          menu4[4]='<a href="/alunos/financeiro/dados/" class=dropmenul target=_self>Dados Financeiros</a>'
+          menu4[5]='<a href="/alunos/financeiro/mensalidades/" class=dropmenul target=_self>Mensalidades Atrasadas</a>'
+          menu4[6]='<div class=dropmenu style="width:100%">&nbsp;<b>Serviços</b></div>'
+          menu4[7]='<a href="/alunos/financeiro/segundavia/" class=dropmenul target=_self>Segunda via de Carnê</a>'
+          menu4[8]='<div class=dropmenu style="width:100%">&nbsp;<b>Contato</b></div>'
+          menu4[9]='<a href="/alunos/contato/financeiro/" class=dropmenul target=_self>Tesouraria</a>'
+  
+          // Fora de Sala
+          var menu5=new Array()
+          menu5[0]='<a href="/alunos/foradesala/vagasestagio/" class=dropmenul target=_self>Estágios e Oportunidades</a>'
+          menu5[1]='<a href="http://neuvoo.com.br/pt" class=dropmenul target=_self>Oportunidades de Emprego</a>'
+      
+          menu5[2]='<div class=dropmenu style="width:100%">&nbsp;<b>Entretenimento</b></div>'
+          //menu5[2]='<a href="/alunos/foradesala/enquetes/" class=dropmenul target=_self>Enquetes</a>'
+          menu5[3]='<a href="http://www.dceuniara.com.br" class=dropmenul target=_blank>Site DCE</a>'
+          menu5[4]='<a href="/alunos/foradesala/calendario/" class=dropmenul target=_self>Agenda</a>'
+          menu5[5]='<div class=dropmenu style="width:100%">&nbsp;<b>Setores de Apoio ao Aluno</b></div>'
+          menu5[6]='<a href="/alunos/foradesala/relacionamento/" class=dropmenul target=_self>Setor de Relacionamento</a>'
+          menu5[7]='<a href="/alunos/foradesala/estagios/" class=dropmenul target=_self>Divisão de Estágios</a>'
+          menu5[8]='<a href="/alunos/foradesala/central/" class=dropmenul target=_self>Central de Atendimento</a>'
+          menu5[9]='<a href="/alunos/foradesala/biblioteca/" class=dropmenul target=_self>Biblioteca</a>'
+    </script>
+    <script src="/templates/js/menu.js" type="text/javascript"></script>
+  </head>
+  <body onLoad="barranavegacao();" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <div id="barranavegacao"></div>
+    <table width="770" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="62">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="25" background="/templates/alunos/imagens/t1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td background="/templates/alunos/imagens/t2.gif" align="center">
+                <img src="/templates/alunos/imagens/trans.gif"><BR>
+              </td>
+              <td width="25" background="/templates/alunos/imagens/t3.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="50">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="25" background="/templates/alunos/imagens/t1.gif" valign="bottom"><img src="/templates/alunos/imagens/t4.gif"><BR></td>
+              <td width="68" background="/templates/alunos/imagens/t5.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="8"><img src="/templates/alunos/imagens/t21.gif"><BR></td>
+              <td width="111" background="/templates/alunos/imagens/t22.gif" align="center">
+                <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td height="30" colspan="2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <font color="#FFFFFF" size="1" style="font:10px"><b>UNIARA VIRTUAL</b></font>
+                    </td>
+                    <td width="4"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                </table>
+              </td>
+              <td width="9"><img src="/templates/alunos/imagens/t23.gif"><BR></td>
+              <td width="8" bgcolor="#5E8EA2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td bgcolor="#5E8EA2"><font color="#FFFFFF" size="6">ALUNO</font></td>
+              <td width="5"><img src="/templates/alunos/imagens/t8.gif"><BR></td>
+              <td width="134" background="/templates/alunos/imagens/t9.gif">
+                <table width="100%" height="50" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                  <tr>
+                    <td height="16" align="center">
+                                  <table width="98%" height="16" border="0" align="CENTER" cellpadding="0" cellspacing="0">
+                                    <form name="redirect" action="#">
+                                      <tr>
+                                          <td align="center">
+                            <div id="tlimite">
+                                      <script>
+                                        var atual = 120;
+                                        var pagina = "quivos.php"; 
+                                        tempolimite();
+                                      </script>
+                                    </div>
+                                          </td>
+                                      </tr>
+                                      </form>
+                                  </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td width="4"><img src="/templates/alunos/imagens/t10.gif"><BR></td>
+              <td width="25" background="/templates/alunos/imagens/t3.gif" valign="bottom"><img src="/templates/alunos/imagens/t6.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="46">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="9"><img src="/templates/alunos/imagens/t11.gif"><BR></td>
+              <td width="152" bgcolor="#5E8EA2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="51"><img src="/templates/alunos/imagens/t12.gif"><BR></td>
+              <td>
+                <table width="400" height="18" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td background="/templates/alunos/imagens/local.jpg">
+                      <font color="#737373"><b>&nbsp;&nbsp;&nbsp;&nbsp;Acadêmico > Consultas > Arquivos Disponíveis</b></font>
+                    </td>
+                  </tr>
+                </table>  
+              </td>
+              <td width="12"><img src="/templates/alunos/imagens/t13.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="151" bgcolor="#5E8EA2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="9"><img src="/templates/alunos/imagens/t14.gif"><BR></td>
+              <td width="49">&nbsp;</td>
+              <td width="4"><img src="/templates/alunos/imagens/t15.gif"><BR></td>
+              <td bgcolor="#5E8EA2">
+                                <table width="98%" height="100%" border="0" align="CENTER" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="left">
+                                          <font color="#FFFFFF">
+                                              <b>Bom Dia, DENNIS WILLIAN GARCIA</b>
+                                            </font>
+                                        </td>
+                                        <td width="110" align="right">
+                                            <font color="#FFFFFF" size="2">
+                                            <b>|</b>
+                                          </font>
+                                          <font color="#FFFFFF" size="1">
+                                              &nbsp;
+                                            <b>Acesso nº 1653</b>
+                                          </font>
+                                        </td>
+                                        <td width="5">
+                                          <img src="/templates/alunos/imagens/trans.gif"><BR>
+                                        </td>
+                                    </tr>
+                                </table>
+              </td>
+              <td width="51"><a href="/login/"><img src="/templates/alunos/imagens/sair.gif"></a><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="22">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="150" bgcolor="#5E8EA2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="8"><img src="/templates/alunos/imagens/t16.gif"><BR></td>
+              <td><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="26">
+          <table width="100%" height="26" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="150" bgcolor="#47778B" align="center"><a href="/alunos/index/" class="menu">home</a></td>
+              <td bgcolor="#B1B1B1">
+                            <table height="26" border="0" align="CENTER" cellpadding="0" cellspacing="0">
+                                <tr>
+                                   
+                                       
+                                       
+                                        <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu1, '150px')" onMouseout="delayhidemenu()">institucional</a><BR></td>
+                                    <td width="22" align="center"><font size="2" color="#ffffff"><b>|</b></font><BR></td>
+                                    <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu2, '150px')" onMouseout="delayhidemenu()">uniara virtual</a><BR></td>
+                                    <td width="22" align="center"><font size="2" color="#ffffff"><b>|</b></font><BR></td>
+                                    <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu3, '203px')" onMouseout="delayhidemenu()">acadêmico</a><BR></td>
+                                    <td width="22" align="center"><font size="2" color="#ffffff"><b>|</b></font><BR></td>
+                                    <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu4, '150px')" onMouseout="delayhidemenu()">financeiro</a><BR></td>
+                                    <td width="22" align="center"><font size="2" color="#ffffff"><b>|</b></font><BR></td>
+                                    <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu5, '170px')" onMouseout="delayhidemenu()">fora de sala</a><BR></td>
+                                </tr>
+                            </table>
+              </td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+                <!-- Centro da Página -->
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="150" valign="top">
+                <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td bgcolor="#5E8EA2" valign="top" align="center">
+                                <BR>                  
+                                                          <a href="/redir/41/" target="_blank"><img src="/arquivos/banners/673d343611964aec8f9dfeb4b172d9cd.jpg" border="0"></a>                     <BR><img src="/templates/imagens/trans.gif" height="6"><BR>
+                      <a href="/redir/60/" target="_blank"><img src="/arquivos/banners/799799a12e9190d6a7a0d0114287ac81.png" border="0"></a>                      <BR><img src="/templates/imagens/trans.gif" height="6"><BR>           
+                      <a href="/redir/47/" target="_blank"><img src="/arquivos/banners/f19d981b9ea9470fb99784931184f83c.jpg" border="0"></a>                      <BR><img src="/templates/imagens/trans.gif" height="6"><BR>
+                      <a href="/redir/32/" target="_blank"><img src="/arquivos/banners/a36a232bf3d5402b2912e5cb611e8269.jpg" border="0"></a>                      <BR><img src="/templates/imagens/trans.gif" height="6"><BR>
+                                          </td>
+                  </tr>
+                  <tr>
+                    <td height="8"><img src="/templates/alunos/imagens/t17.gif"><BR></td>
+                  </tr>
+                </table>
+              </td>
+              <td valign="top">
+                <table width="96%" align="center">
+                  <tr>
+                    <td valign="top">
+<BR>
+<div id="limite"></div>
+<div id='conteudo'></div>
+            <table width="99%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#000000">
+              <tr bgcolor="#0f3b4d">
+                <td colspan="4" align="center">
+                  <font color="#FFFFFF"><b>ARQUIVOS DISPONIBILIZADOS PELA COORDENAÇÃO</b></font>
+                </td>
+              </tr>
+              <tr bgcolor="#47778b"> 
+                  <td valign="top" bgcolor="#47778b"><b>Arquivo</b></td>
+                  <td valign="top" align="center" bgcolor="#47778b"><b>Tamanho</b></td>
+                  <td valign="top" align="center" bgcolor="#47778b"><b>Inclusão</b></td>
+                  <td valign="top" align="center" bgcolor="#47778b"><b>Disponível Até</b></td>
+              </tr>
+              
+                      <tr bgcolor="#FFFFFF"> 
+                        <td valign="top"><a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf1Ur7yMyFsTDL4Bqo3IUWfM8oJbw2k2yscCQZG-tjoek6SSPqvLUIgKOmF_ztorgu1C5LvFAJNCVY7jehvPwFaEJxiS-8zBnsAu0TA-hEa1eN8FOEXtYfJxzhrP_oREtWA')">REGULAMENTO TCC 2015</a></td>
+                        <td valign="top" align="center">276 kb</td>
+                        <td valign="top" align="center">26/03/2015</td>
+                        <td valign="top" align="center">19/12/2015</td>
+                      </tr>
+                      
+                      <tr bgcolor="#bdd6e0"> 
+                        <td valign="top"><a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf6kijaF2LPfYC3b8ZUbF79t1iFcp9id6bNNPNWmlUq9Pgbo-RqaQJNS7Nw8Bql743Jbrt7x60IYURSYKODLVXomR_zdGCaynY3mvbBQdysAnSJa7dnDNpNzKY5JRguDpNg')">DOCUMENTAçãO DE ESTáGIO</a></td>
+                        <td valign="top" align="center">29 kb</td>
+                        <td valign="top" align="center">12/06/2015</td>
+                        <td valign="top" align="center">19/12/2015</td>
+                      </tr>
+                      
+                      <tr bgcolor="#FFFFFF"> 
+                        <td valign="top"><a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf2skIsaUOEv9ly3TxzfSsG-rCkFffQRHZTZwDf8uhYXgGU8Lbi-j84jsFs5BDZJSlqLmZgQ0eHSOKrH0n7ICT8RgF_mFCrQ6QqA9Pmvg09KSshMLIi_ysPhYY4QO9eFnpA')">MODELO PROJETO DE ESTáGIO</a></td>
+                        <td valign="top" align="center">40 kb</td>
+                        <td valign="top" align="center">12/06/2015</td>
+                        <td valign="top" align="center">19/12/2015</td>
+                      </tr>
+                      
+                      <tr bgcolor="#bdd6e0"> 
+                        <td valign="top"><a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf1xnSlvrvB-IFM5Iz2KaOwQQvCeZYik8ZPW8b-05sW1VaTP0609VHSbjL774-OlMEIwhX9RhAgERa3dr8Jh2Y5AS3xlPchxcYA-x3wM8O3uQ0DPSpiGWgudEpAVzvC7Mhw')">MODELO RELATóRIO ESTáGIO</a></td>
+                        <td valign="top" align="center">46 kb</td>
+                        <td valign="top" align="center">12/06/2015</td>
+                        <td valign="top" align="center">19/12/2015</td>
+                      </tr>
+                      
+            </table>
+            <BR>
+            
+            <table width="99%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#000000">
+              <tr bgcolor="#0f3b4d">
+                <td colspan="5" align="center">
+                  <font color="#FFFFFF"><b>ARQUIVOS POR DISCIPLINA DISPONIBILIZADOS PELA COORDENAÇÃO</b></font>
+                </td>
+              </tr>
+              <tr bgcolor="#47778b"> 
+                  <td valign="top" bgcolor="#47778b"><b>Arquivo</b></td>
+                  <td valign="top" bgcolor="#47778b"><b>Disciplina</b></td>
+                  <td valign="top" align="center" bgcolor="#47778b"><b>Tamanho</b></td>
+                  <td valign="top" align="center" bgcolor="#47778b"><b>Inclusão</b></td>
+                  <td valign="top" align="center" bgcolor="#47778b"><b>Disponível Até</b></td>
+              </tr>
+              
+                  <tr bgcolor="#FFFFFF"> 
+                    <td valign="top"><a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf7l6VejkbuBsM5UQPK1QsnQuFTtp4rS9nOr0RlnDCoQkZxLMBfbCy8ZWH7N5e12AC4j0mtfcoxDX8HvRHM677JcLUaNNb04x9N0aCg6oYxTksxHuzv8X4y9sewBlZ9hxg3gLoyfJGSa8JFc_CRzC8KkfohZrf75kXSJlLTLHaw4Ozdho45nUuZsK_5_9-8ufWw')">LISTA DE EXERCICIOS 1</a></td>
+                    <td valign="top">INTRODUÇÃO À PROGRAMAÇÃO ORIENTADA A OBJETOS</td>
+                    <td valign="top" align="center">21 kb</td>
+                    <td valign="top" align="center">16/03/2015</td>
+                    <td valign="top" align="center">19/12/2015</td>
+                  </tr>
+                  
+            </table>
+            <BR>
+            
+            <table width="99%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#000000">
+              <tr bgcolor="#0f3b4d">
+                <td colspan="5" align="center">
+                  <font color="#FFFFFF"><b>ARQUIVOS POR DISCIPLINA DISPONIBILIZADOS PELO PROFESSOR</b></font>
+                </td>
+              </tr>
+              
+                    <tr bgcolor="#47778b">
+                      <td><b>ELETRÔNICA DIGITAL</b></td>
+                      <td valign="top" align="center" bgcolor="#47778b"><b>Tamanho</b></td>
+                      <td valign="top" align="center" bgcolor="#47778b"><b>Inclusão</b></td>
+                      <td valign="top" align="center" bgcolor="#47778b"><b>Disponível Até</b></td>
+                    </tr>
+                    
+                  <tr bgcolor="#FFFFFF">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf63AXY2f4w1SDmKAcHoTwdG7pcDHcYORwdXorIf0-vNMaDV3bglPA7xyQcIxUVXjh3dZG6JSwnehjQKSYvArM9Q9fcEKPN01QV3UbDOsPUXcSDTccMaY6xZ6jB7P3BMrw57eT39-ZgPF-pnbm1WUaGU')">PLANO DE ENSINO</a></td>
+                    <td valign="top" align="center">32 kb</td>
+                    <td valign="top" align="center">09/03/2015</td>
+                    <td valign="top" align="center">09/12/2015</td>
+                  </tr>
+                  
+                  <tr bgcolor="#bdd6e0">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf4S2Mgznr1iXpwQ0_mnUWjemgeh97L_IksQodfi_suEK36MG4IbCWhJx8gmT5mXtwbMG5wxbE2ONGZ0EF1yOnv4L4S2krF-OUY5HPA9aBcsws--7U5E_VGDcseG9JknYCJryZpNAB8iaoU_FpMoRGU4')">LISTA DE EXERCíCIOS 2</a></td>
+                    <td valign="top" align="center">3448 kb</td>
+                    <td valign="top" align="center">11/06/2015</td>
+                    <td valign="top" align="center">11/08/2015</td>
+                  </tr>
+                  
+                  <tr bgcolor="#FFFFFF">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf2woGUfMg3F6-RAaZb0jGtj8jBUtDiEls1FE4L5hZA_j34n2KpvwbDd0mcOyPY-8IidoEij-OuXtc2xpnqGC0HoJgq50fb449TG6jpu50pod_9-XTDulVCLAqAAQyLWVeJ4GU7ALUBpiL3M1WOO2UNg')">LISTA DE EXERCíCIOS 3</a></td>
+                    <td valign="top" align="center">2349 kb</td>
+                    <td valign="top" align="center">11/06/2015</td>
+                    <td valign="top" align="center">11/08/2015</td>
+                  </tr>
+                  
+                    <tr bgcolor="#47778b">
+                      <td><b>INTRODUÇÃO À PROGRAMAÇÃO ORIENTADA A OBJETOS</b></td>
+                      <td valign="top" align="center" bgcolor="#47778b"><b>Tamanho</b></td>
+                      <td valign="top" align="center" bgcolor="#47778b"><b>Inclusão</b></td>
+                      <td valign="top" align="center" bgcolor="#47778b"><b>Disponível Até</b></td>
+                    </tr>
+                    
+                  <tr bgcolor="#FFFFFF">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf938Qr97RQbeMJOHeZtzCawy5bvvRVB39LZw7t6_9_uO005CLMhRHvYKI8D7PB4QYjL2YOJmtkLhXiAITk1Ai8f0hLiGO-ISI-eIrgG3vtu2YnksiYvzZIRraWwwrubQVrnrfq0kSV5tC1yRBHTw36RNeN4SSfhvbdm-RHbn-ScLG9cPbodh1wr2LqdraLSBDA')">AULA 1 - APRESENTAçãO</a></td>
+                    <td valign="top" align="center">225 kb</td>
+                    <td valign="top" align="center">06/03/2015</td>
+                    <td valign="top" align="center">19/12/2015</td>
+                  </tr>
+                  
+                  <tr bgcolor="#bdd6e0">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplfxUHaXoZG7-4USU-YtedXRkx1xyPrIiZJ43OHAlurv8sJXhkKVgHgqmciGPnUZmzO6WRun5sA2t_HqQv1SmB44T1PRC_JVTwWgfIlVDzh8niy5t2Bzo3XKTcr4z6KQutsHtFdroYlmVNEnOVB51aPNEOBAeJNWhY7JFgf5IXdkCwv_9RPzo3EzCjK_cSufSQMw')">AULA 2 - CONTEúDO</a></td>
+                    <td valign="top" align="center">868 kb</td>
+                    <td valign="top" align="center">06/03/2015</td>
+                    <td valign="top" align="center">19/12/2015</td>
+                  </tr>
+                  
+                  <tr bgcolor="#FFFFFF">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplfxaYL5XPfcwc-yfp788bYpDosJMbmqEYr6CbZcW3Im1rglGrdRIzk7rWgBirz4yDty-RUQwCvO7Pgdyblrr7pNAQ58vVAa9ztBvK7UJpluOusOM7k8ZY6CjQUc5CaftCv27xOZAnF6bIZcJC4emEsjoenPautPhbQiR6fsNH1ukz')">CRONOGRAMA</a></td>
+                    <td valign="top" align="center">28 kb</td>
+                    <td valign="top" align="center">15/03/2015</td>
+                    <td valign="top" align="center">19/12/2015</td>
+                  </tr>
+                  
+                  <tr bgcolor="#bdd6e0">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplfyDVsLvqGTNNicei6CfypCDfO21lKyQbV4y8BBLlr8QvCMr-H1dZKbsq8fxHJKDTAgGypK_iMYDvU97gkqLkLGLpIYVbC_Zk2LSQN9RySZrc18lM4rgnIaZQ9E0JIzP-_OWigZY1I1yZbThXity8ThTjIoUoM8iHgS9639QJ0Hjn9s8nEEEsa4SCZv_3cJ7RrA')">AULA 1 (APRESENTAçãO) - IPOO</a></td>
+                    <td valign="top" align="center">109 kb</td>
+                    <td valign="top" align="center">21/03/2015</td>
+                    <td valign="top" align="center">19/12/2015</td>
+                  </tr>
+                  
+                  <tr bgcolor="#FFFFFF">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplfwOcOZLw5nJ0hWvjClxvCKMWqW9vnSvrU09eOhcNQt8TEhhqCnulU95N3XK1pcDWyCChrmulBhVbfMaDObkkmHMM638imEBAta_Xre9oj7kIwPtujho7hDGw_i760dzCajuauPciIefyjG8i4pXxUSMAQFYEKLZ4DUuh5utM0K28')">AULA 2 - IPOO</a></td>
+                    <td valign="top" align="center">473 kb</td>
+                    <td valign="top" align="center">21/03/2015</td>
+                    <td valign="top" align="center">19/12/2015</td>
+                  </tr>
+                  
+                  <tr bgcolor="#bdd6e0">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf1vn6qScZzBXyMo-95WpnTK7sA7rE6alptT6DRoNTDlX-ESA09RvTIzhKlMXfIRs8nrpV2aIn0_P2vPoFvK4VBf1mvD0VSb2uwmDhjN8MhZcmhgB4I3Vw_LobDCPdDahgrHpO8K1z7Vro3TqM2al06U68GxOdsOyoa4YiQfXDiGlZUyfObSjKCWgwVocfrFaBWVfEBt_jlaH64f1hV10Jdo')">LISTA EXERCICIOS 2O BIMESTRE - ENCAPSULAMENTO</a></td>
+                    <td valign="top" align="center">19 kb</td>
+                    <td valign="top" align="center">17/06/2015</td>
+                    <td valign="top" align="center">17/12/2015</td>
+                  </tr>
+                  
+                  <tr bgcolor="#FFFFFF">
+                    <td valign="top">&nbsp;<a href="javascript:abrearq('/alunos/consultas/arquivos/YpOi_tXVKuA28EMjBZplf_qAhzzQ2cqcqDrCm0qRGByp6S2JPtCzxfAvHhbyO41w3PukxIU2YQ0sOSaPf09HO9EjdQFiuhJ9yscUAN5qEtKFXOTispGOpsbSBUmvd-dRbDYfzF3NLGHabYTOlOAyQlCaH0aH_NQRKXue9KYVAM-BR5ULM5IXA1gy8wOKr1NTWEuTcU2wrolTL_x5R1kUflMXgRpQwAyZhnydnOVSgp0')">LISTA EXERCICIOS 2O BIMESTRE - HERANCA</a></td>
+                    <td valign="top" align="center">203 kb</td>
+                    <td valign="top" align="center">17/06/2015</td>
+                    <td valign="top" align="center">17/12/2015</td>
+                  </tr>
+                  
+            </table>
+            <BR>
+            <div id="limite2"></div>                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>                    <!-- Fim Centro da Página -->
+
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="1">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="2" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td bgcolor="#000000"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="2" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="84">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="109"><img src="/templates/alunos/imagens/t18.jpg"><BR></td>
+              <td width="20" background="/templates/alunos/imagens/t19.jpg"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td background="/templates/alunos/imagens/t19.jpg">
+                <font face="verdana" size="1" color="#4c4c4c">
+                  <BR>
+                  <B>Copyright © 2015 Centro Universitário de Araraquara - UNIARA.</B><BR>
+                  Todos os direitos reservados - UV.2.1-WV - ARQUIVOS-2.1-WV.<BR><BR>&nbsp;
+                </font>
+              </td>
+              <td width="15"><img src="/templates/alunos/imagens/t20.jpg"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="5">
+          <img src="/templates/alunos/imagens/trans.gif"><BR>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27812250-1']);
+  _gaq.push(['_setDomainName', 'uniara.com.br']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
