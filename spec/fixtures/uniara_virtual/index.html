@@ -1,0 +1,879 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+      <title>Uniara Virtual - Home</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+      <meta name="Author" content="Weverton Velludo - wvelludo@uniara.com.br">
+      <meta name="Robots" CONTENT="noindex,nofollow">
+    <link type="image/x-icon" rel="shortcut icon" href="http://www.uniara.com.br/favicon.ico" />
+      <link rel="stylesheet" href="http://www.uniara.com.br/barra_navegacao.css" type="text/css">
+    <script type="text/javascript" src="http://www.uniara.com.br/barra_navegacao_virtual.js.php"></script>
+      <link href="/templates/alunos/css.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="/templates/alunos/ferramentas/js/jquery.js"></script>
+        <script type="text/javascript" src="/templates/alunos/ferramentas/js/jquery.jqDock.min.js"></script>
+        <script type="text/javascript" src="/templates/alunos/ferramentas/js/jquery-ui-1.8.15.custom.min.js"></script>
+        <link type="text/css" href="/templates/alunos/ferramentas/css/ui-lightness/jquery-ui-1.8.15.custom.css" rel="stylesheet" />
+    
+      <script src="/templates/js/generico.js" type="text/javascript"></script>
+      <script src="/templates/alunos/js/generico.js" type="text/javascript"></script>
+      <script src="/templates/js/mascaraHellas.js"></script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-9447697-1");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+      <script type="text/javascript">
+      
+      function tempolimite() {
+        if (atual != 0) {
+          document.getElementById('tlimite').innerHTML = "Tempo restante: <b>" + atual + "</b> min."
+          if (atual==2) {
+            if (pagina != "/index.php") {
+              document.getElementById('limite').innerHTML = "<table width='99%' align='center' border='0' cellpadding='3' cellspacing='1' bgcolor='#000000'><tr bgcolor='#0f3b4d'><td align='center'><font color='#FFFFFF'><b>ATENÇÃO</b></font></td></tr><tr bgcolor='#47778b'><td align=center><b>Sua sessão está chegando ao fim, salve as informações para evitar perda de dados.<BR>Você tem menos de 2 minutos para verificar e postar seus dados.</b></td></tr></table><BR>"
+              document.getElementById('limite2').innerHTML = "<BR><table width='99%' align='center' border='0' cellpadding='3' cellspacing='1' bgcolor='#000000'><tr bgcolor='#0f3b4d'><td align='center'><font color='#FFFFFF'><b>ATENÇÃO</b></font></td></tr><tr bgcolor='#47778b'><td align=center><b>Sua sessão está chegando ao fim, salve as informações para evitar perda de dados.<BR>Você tem menos de 2 minutos para verificar e postar seus dados.</b></td></tr></table><BR>"
+            }
+          }
+          atual-=1;
+        } else {
+          window.location="/login/";
+        }
+        setTimeout("tempolimite()",60000);
+        }
+        
+          // Institucional
+          var menu1=new Array()
+          menu1[0]='<div class=dropmenu style="width:100%">&nbsp;<b>Informações</b></div>'
+          menu1[1]='<a href="/alunos/institucional/reitor/" class=dropmenul target=_self>Palavra do Reitor</a>'
+          menu1[2]='<a href="http://www.uniara.com.br/institucional/a_uniara.php" class=dropmenul target=_blank>A Uniara</a>'
+          menu1[3]='<a href="http://www.uniara.com.br/atividades_culturais/" class=dropmenul target=_blank>Atividades Culturais</a>'
+          menu1[4]='<a href="http://www.uniara.com.br/esporte/" class=dropmenul target=_blank>Esporte</a>'
+          menu1[5]='<a href="http://www.uniara.com.br/revistauniara/default.asp" class=dropmenul target=_blank>Revista Uniara</a>'
+          menu1[6]='<a href="http://www.uniara.com.br/parque_do_basalto/" class=dropmenul target=_blank>Parque do Basalto</a>'
+          menu1[7]='<a href="http://www.uniara.com.br/ageuniara/" class=dropmenul target=_blank>Ageuniara</a>'
+          menu1[8]='<a href="http://www.uniara.com.br/guia_turistico/" class=dropmenul target=_blank>Guia de Araraquara</a>'
+          menu1[9]='<a href="http://www.uniara.com.br/visitavirtual/" class=dropmenul target=_blank>Visita Virtual</a>'
+  
+          // Uniara Virtual
+          var menu2=new Array()
+          menu2[0]='<div class=dropmenu style="width:100%">&nbsp;<b>Informações</b></div>'
+          menu2[1]='<a href="/alunos/virtual/apresentacao/" class=dropmenul target=_self>Apresentação</a>'
+          menu2[2]='<div class=dropmenu style="width:100%">&nbsp;<b>Contato</b></div>'
+          menu2[3]='<a href="/alunos/contato/criticas/" class=dropmenul target=_self>Críticas e Sugestões</a>'
+      menu2[4]='<div class=dropmenu style="width:100%">&nbsp;<b>Serviços</b></div>'
+      menu2[5]='<a href="/alunos/servicos/senha/" class=dropmenul target=_self>Alteração de Senha</a>'
+      
+          // Academico
+          var menu3=new Array()
+          menu3[0]='<div class=dropmenu style="width:100%">&nbsp;<b>Informações</b></div>'
+          menu3[1]='<a href="/alunos/informacoes/apresentacao/" class=dropmenul target=_self>Apresentação</a>'
+          menu3[2]='<a href="/alunos/informacoes/duvidas/" class=dropmenul target=_self>Dúvidas Freqüentes</a>'
+          //menu3[3]='<a href="#" onclick="javascript:guia();" class=dropmenul target=_self>Guia do Aluno</a>'
+          menu3[4]='<a href="http://www.uniara.com.br/graduacao/eng_computacao/" class=dropmenul target=_blank>Meu Curso</a>'
+          menu3[5]='<div class=dropmenu style="width:100%">&nbsp;<b>Consultas</b></div>'
+          menu3[6]='<a href="/alunos/consultas/disciplinas/" class=dropmenul target=_self>Disciplinas Matriculadas</a>'
+          menu3[7]='<a href="/alunos/consultas/dados/" class=dropmenul target=_self>Dados Cadastrais</a>'
+          menu3[8]='<a href="/alunos/consultas/horario/" class=dropmenul target=_self>Horário de Aula</a>'
+          menu3[9]='<a href="/alunos/consultas/atividades/" class=dropmenul target=_self>Atividades Complementares</a>'
+          menu3[10]='<a href="/alunos/consultas/historico/" class=dropmenul target=_self>Histórico Escolar</a>'
+          menu3[11]='<a href="/alunos/consultas/arquivos/" class=dropmenul target=_self>Arquivos Disponíveis</a>'
+          menu3[12]='<a href="/alunos/consultas/requerimentos/" class=dropmenul target=_self>Requerimentos</a>'
+          menu3[13]='<a href="/alunos/consultas/planoensino/" class=dropmenul target=_self>Planos de Ensino das Disciplinas</a>'
+          menu3[14]='<a href="/alunos/consultas/calendario/" class=dropmenul target=_self>Calendário Acadêmico</a>'
+          menu3[15]='<a href="/alunos/consultas/notas/" class=dropmenul target=_self>Registro de Notas</a>'
+          menu3[16]='<a href="/alunos/consultas/faltas/" class=dropmenul target=_self>Registro de Faltas</a>'
+
+              
+
+          //menu3[17]='<a href="/alunos/consultas/mensagens/" class=dropmenul target=_self>Caixa de Mensagens</a>'
+
+          menu3[18]='<div class=dropmenu style="width:100%">&nbsp;<b>Serviços</b></div>'
+          menu3[19]='<a href="/alunos/servicos/dados/" class=dropmenul target=_self>Alteração de Cadastro</a>'
+          menu3[20]='<a href="/alunos/servicos/biblioteca/" class=dropmenul target=_self>Biblioteca</a>'
+          menu3[21]='<a href="/alunos/servicos/requerimentos/" class=dropmenul target=_self>Solicitação de Requerimentos</a>'
+          menu3[22]='<a href="/alunos/servicos/matricula/" class=dropmenul target=_self>Matrícula On-line</a>'      
+          menu3[23]='<div class=dropmenu style="width:100%">&nbsp;<b>Contato</b></div>'
+          menu3[24]='<a href="/alunos/contato/central/" class=dropmenul target=_self>Central de Atendimento</a>'        
+                menu3[25]='<a href="/alunos/servicos/coordenador/" class=dropmenul target=_self>Fale com seu coordenador</a>'
+              
+  
+          // Financeiro
+          var menu4=new Array()
+          menu4[0]='<div class=dropmenu style="width:100%">&nbsp;<b>Informações</b></div>'
+          menu4[1]='<a href="/alunos/financeiro/apresentacao/" class=dropmenul target=_self>Apresentação</a>'
+          menu4[2]='<a href="/alunos/financeiro/duvidas/" class=dropmenul target=_self>Dúvidas Freqüentes</a>'
+          menu4[3]='<div class=dropmenu style="width:100%">&nbsp;<b>Consultas</b></div>'
+          menu4[4]='<a href="/alunos/financeiro/dados/" class=dropmenul target=_self>Dados Financeiros</a>'
+          menu4[5]='<a href="/alunos/financeiro/mensalidades/" class=dropmenul target=_self>Mensalidades Atrasadas</a>'
+          menu4[6]='<div class=dropmenu style="width:100%">&nbsp;<b>Serviços</b></div>'
+          menu4[7]='<a href="/alunos/financeiro/segundavia/" class=dropmenul target=_self>Segunda via de Carnê</a>'
+          menu4[8]='<div class=dropmenu style="width:100%">&nbsp;<b>Contato</b></div>'
+          menu4[9]='<a href="/alunos/contato/financeiro/" class=dropmenul target=_self>Tesouraria</a>'
+  
+          // Fora de Sala
+          var menu5=new Array()
+          menu5[0]='<a href="/alunos/foradesala/vagasestagio/" class=dropmenul target=_self>Estágios e Oportunidades</a>'
+          menu5[1]='<a href="http://neuvoo.com.br/pt" class=dropmenul target=_self>Oportunidades de Emprego</a>'
+      
+          menu5[2]='<div class=dropmenu style="width:100%">&nbsp;<b>Entretenimento</b></div>'
+          //menu5[2]='<a href="/alunos/foradesala/enquetes/" class=dropmenul target=_self>Enquetes</a>'
+          menu5[3]='<a href="http://www.dceuniara.com.br" class=dropmenul target=_blank>Site DCE</a>'
+          menu5[4]='<a href="/alunos/foradesala/calendario/" class=dropmenul target=_self>Agenda</a>'
+          menu5[5]='<div class=dropmenu style="width:100%">&nbsp;<b>Setores de Apoio ao Aluno</b></div>'
+          menu5[6]='<a href="/alunos/foradesala/relacionamento/" class=dropmenul target=_self>Setor de Relacionamento</a>'
+          menu5[7]='<a href="/alunos/foradesala/estagios/" class=dropmenul target=_self>Divisão de Estágios</a>'
+          menu5[8]='<a href="/alunos/foradesala/central/" class=dropmenul target=_self>Central de Atendimento</a>'
+          menu5[9]='<a href="/alunos/foradesala/biblioteca/" class=dropmenul target=_self>Biblioteca</a>'
+    </script>
+    <script src="/templates/js/menu.js" type="text/javascript"></script>
+  </head>
+  <body onLoad="barranavegacao();" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <div id="barranavegacao"></div>
+    <table width="770" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="62">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="25" background="/templates/alunos/imagens/t1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td background="/templates/alunos/imagens/t2.gif" align="center">
+                <img src="/templates/alunos/imagens/trans.gif"><BR>
+              </td>
+              <td width="25" background="/templates/alunos/imagens/t3.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="50">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="25" background="/templates/alunos/imagens/t1.gif" valign="bottom"><img src="/templates/alunos/imagens/t4.gif"><BR></td>
+              <td width="68" background="/templates/alunos/imagens/t5.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="8"><img src="/templates/alunos/imagens/t21.gif"><BR></td>
+              <td width="111" background="/templates/alunos/imagens/t22.gif" align="center">
+                <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td height="30" colspan="2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <font color="#FFFFFF" size="1" style="font:10px"><b>UNIARA VIRTUAL</b></font>
+                    </td>
+                    <td width="4"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                </table>
+              </td>
+              <td width="9"><img src="/templates/alunos/imagens/t23.gif"><BR></td>
+              <td width="8" bgcolor="#5E8EA2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td bgcolor="#5E8EA2"><font color="#FFFFFF" size="6">ALUNO</font></td>
+              <td width="5"><img src="/templates/alunos/imagens/t8.gif"><BR></td>
+              <td width="134" background="/templates/alunos/imagens/t9.gif">
+                <table width="100%" height="50" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                  <tr>
+                    <td height="16" align="center">
+                                  <table width="98%" height="16" border="0" align="CENTER" cellpadding="0" cellspacing="0">
+                                    <form name="redirect" action="#">
+                                      <tr>
+                                          <td align="center">
+                            <div id="tlimite">
+                                      <script>
+                                        var atual = 120;
+                                        var pagina = "/index.php"; 
+                                        tempolimite();
+                                      </script>
+                                    </div>
+                                          </td>
+                                      </tr>
+                                      </form>
+                                  </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td width="4"><img src="/templates/alunos/imagens/t10.gif"><BR></td>
+              <td width="25" background="/templates/alunos/imagens/t3.gif" valign="bottom"><img src="/templates/alunos/imagens/t6.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="46">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="9"><img src="/templates/alunos/imagens/t11.gif"><BR></td>
+              <td width="152" bgcolor="#5E8EA2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="51"><img src="/templates/alunos/imagens/t12.gif"><BR></td>
+              <td>
+                <table width="400" height="18" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td background="/templates/alunos/imagens/local.jpg">
+                      <font color="#737373"><b>&nbsp;&nbsp;&nbsp;&nbsp;Home</b></font>
+                    </td>
+                  </tr>
+                </table>  
+              </td>
+              <td width="12"><img src="/templates/alunos/imagens/t13.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="151" bgcolor="#5E8EA2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="9"><img src="/templates/alunos/imagens/t14.gif"><BR></td>
+              <td width="49">&nbsp;</td>
+              <td width="4"><img src="/templates/alunos/imagens/t15.gif"><BR></td>
+              <td bgcolor="#5E8EA2">
+                                <table width="98%" height="100%" border="0" align="CENTER" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="left">
+                                          <font color="#FFFFFF">
+                                              <b>Bom Dia, TYRION LANNISTER</b>
+                                            </font>
+                                        </td>
+                                        <td width="110" align="right">
+                                            <font color="#FFFFFF" size="2">
+                                            <b>|</b>
+                                          </font>
+                                          <font color="#FFFFFF" size="1">
+                                              &nbsp;
+                                            <b>Acesso nº 1665</b>
+                                          </font>
+                                        </td>
+                                        <td width="5">
+                                          <img src="/templates/alunos/imagens/trans.gif"><BR>
+                                        </td>
+                                    </tr>
+                                </table>
+              </td>
+              <td width="51"><a href="/login/"><img src="/templates/alunos/imagens/sair.gif"></a><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="22">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="150" bgcolor="#5E8EA2"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="8"><img src="/templates/alunos/imagens/t16.gif"><BR></td>
+              <td><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="26">
+          <table width="100%" height="26" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="150" bgcolor="#47778B" align="center"><a href="/alunos/index/" class="menu">home</a></td>
+              <td bgcolor="#B1B1B1">
+                            <table height="26" border="0" align="CENTER" cellpadding="0" cellspacing="0">
+                                <tr>
+                                   
+                                       
+                                       
+                                        <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu1, '150px')" onMouseout="delayhidemenu()">institucional</a><BR></td>
+                                    <td width="22" align="center"><font size="2" color="#ffffff"><b>|</b></font><BR></td>
+                                    <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu2, '150px')" onMouseout="delayhidemenu()">uniara virtual</a><BR></td>
+                                    <td width="22" align="center"><font size="2" color="#ffffff"><b>|</b></font><BR></td>
+                                    <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu3, '203px')" onMouseout="delayhidemenu()">acadêmico</a><BR></td>
+                                    <td width="22" align="center"><font size="2" color="#ffffff"><b>|</b></font><BR></td>
+                                    <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu4, '150px')" onMouseout="delayhidemenu()">financeiro</a><BR></td>
+                                    <td width="22" align="center"><font size="2" color="#ffffff"><b>|</b></font><BR></td>
+                                    <td width="103" align="center"><a href=# class="menu" onMouseOver="return dropdownmenu(this, event, menu5, '170px')" onMouseout="delayhidemenu()">fora de sala</a><BR></td>
+                                </tr>
+                            </table>
+              </td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+                <!-- Centro da Página -->
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="150" valign="top">
+                <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td bgcolor="#5E8EA2" valign="top" align="center">
+                                <BR>
+                                                          <a href="/redir/47/" target="_blank"><img src="/arquivos/banners/f19d981b9ea9470fb99784931184f83c.jpg" border="0"></a>                      <BR><img src="/templates/imagens/trans.gif" height="6"><BR>
+                      <a href="/redir/60/" target="_blank"><img src="/arquivos/banners/799799a12e9190d6a7a0d0114287ac81.png" border="0"></a>                      <BR><img src="/templates/imagens/trans.gif" height="6"><BR>
+                      <a href="/redir/41/" target="_blank"><img src="/arquivos/banners/673d343611964aec8f9dfeb4b172d9cd.jpg" border="0"></a>                      <BR><img src="/templates/imagens/trans.gif" height="6"><BR>
+                                            <BR><img src="/templates/imagens/trans.gif" height="6"><BR>
+                                          </td>
+                  </tr>
+                  <tr>
+                    <td height="8"><img src="/templates/alunos/imagens/t17.gif"><BR></td>
+                  </tr>
+                </table>
+              </td>
+              <td valign="top">
+                <table width="100%" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td valign="top">
+<div id="limite"></div>
+<table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="384" valign="top">
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      
+        <tr><td height="15"><img src="/templates/alunos/imagens/trans.gif"><BR></td></tr>
+      
+        <!-- LINHA 01 -->
+        <tr>
+          <td>
+                      </td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="110" bgcolor="#B1B1B1" align="center">
+                  <!-- FOTO -->
+                  <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <div style="border: 1px solid #0f3b4d;margin: 0px auto; padding: 0px 0px 0px 0px; width: 89px; background: #fff; text-align: right; align:center;">
+                          <div id='conteudo'></div><img src="/alunos/foto/aluno/C8qmAuT2cETuR7aL2ZJ8DlU57_6rBsTe3ImSVjW7RkA" width="89" height="116"><BR>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                    </tr>
+                  </table>
+                  <!-- FIM FOTO -->
+                </td>
+                <td valign="top">
+                  <!-- NOTICIAS -->
+                  <table width="100%" height="138" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="10">
+                        <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="9"><img src="/templates/alunos/imagens/c1.gif"><BR></td>
+                            <td background="/templates/alunos/imagens/c2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                            <td width="9"><img src="/templates/alunos/imagens/c3.gif"><BR></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td background="/templates/alunos/imagens/c4.gif" width="9"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                            <td bgcolor="#FFFFFF">
+                              
+                  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  
+                      <tr>
+                    <td width="31" height="31" align="center">
+                      <table width="31" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td background="/templates/alunos/imagens/a1.gif" align="center">
+                            <font color="#FFFFFF"><b>Nov</b></font><BR>
+                            <font color="#f3ea00"><b>20</b></font>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="5"><img src="/templates/imagens/trans.gif"></td>
+                          <td>
+                              <a href="http://www.uniara.com.br/noticias/?n=37958" target="_blank" style='font-weight:normal;'>Universo Uniara no Shopping Jaraguá oferece prestação de serviços à comunidade</a>
+                          </td>
+                     </tr>
+            
+                                  <tr>
+                                    <td height="10"><img src="/templates/imagens/trans.gif"><BR></td>
+                                  </tr>
+                                  
+                      <tr>
+                    <td width="31" height="31" align="center">
+                      <table width="31" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td background="/templates/alunos/imagens/a1.gif" align="center">
+                            <font color="#FFFFFF"><b>Nov</b></font><BR>
+                            <font color="#f3ea00"><b>19</b></font>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="5"><img src="/templates/imagens/trans.gif"></td>
+                          <td>
+                              <a href="http://www.uniara.com.br/noticias/?n=37954" target="_blank" style='font-weight:normal;'>Trabalhos de intervenção expostos por estudantes de Enfermagem da Uniara abordam cuidados na assistência à saúde</a>
+                          </td>
+                     </tr>
+            
+                                  <tr>
+                                    <td height="10"><img src="/templates/imagens/trans.gif"><BR></td>
+                                  </tr>
+                                  
+                      <tr>
+                    <td width="31" height="31" align="center">
+                      <table width="31" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td background="/templates/alunos/imagens/a1.gif" align="center">
+                            <font color="#FFFFFF"><b>Nov</b></font><BR>
+                            <font color="#f3ea00"><b>19</b></font>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="5"><img src="/templates/imagens/trans.gif"></td>
+                          <td>
+                              <a href="http://www.uniara.com.br/noticias/?n=37955" target="_blank" style='font-weight:normal;'>Alunos de Jornalismo da Uniara produzem documentário sobre religiosa torturada durante o regime militar</a>
+                          </td>
+                     </tr>
+            
+                             </table>
+                         </td>
+                </tr>
+            </table>
+                                      </td>
+                            <td background="/templates/alunos/imagens/c5.gif" width="9"><img src="/templates/alunos/imagens/trans.gif"><BR><BR></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="9">
+                        <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="9"><img src="/templates/alunos/imagens/c6.gif"><BR></td>
+                            <td background="/templates/alunos/imagens/c7.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                            <td width="9"><img src="/templates/alunos/imagens/c8.gif"><BR></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- FIM LINHA 01 -->
+
+        <tr><td height="15"><img src="/templates/alunos/imagens/trans.gif"><BR></td></tr>
+                                
+        <!-- LINHA 02 -->
+        <tr>
+          <td valign="top">
+            <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="140">
+                  <!-- LINKS PRINCIPAIS -->
+                  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="20" bgcolor="#5E8EA2">&nbsp;<a href="/alunos/consultas/notas/" class="menu">registro de notas</a></td>
+                      <td height="20" width="5"><img src="/templates/alunos/imagens/c9.gif"><BR></td>
+                    </tr>
+                    <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                    </tr>
+                    <tr>
+                      <td height="20" bgcolor="#5E8EA2">&nbsp;<a href="/alunos/consultas/faltas/" class="menu">registro de faltas</a></td>
+                      <td height="20" width="5"><img src="/templates/alunos/imagens/c9.gif"><BR></td>
+                    </tr>
+                    <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                    </tr>
+                    <tr>
+                      <td height="20" bgcolor="#5E8EA2">&nbsp;<a href="/alunos/consultas/horario/" class="menu">horário de aula</a></td>
+                      <td height="20" width="5"><img src="/templates/alunos/imagens/c9.gif"><BR></td>
+                    </tr>
+                    <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                    </tr>
+                    <tr>
+                      <td height="20" bgcolor="#5E8EA2">&nbsp;<a href="/alunos/financeiro/segundavia/" class="menu">segunda via de carnê</a></td>
+                      <td height="20" width="5"><img src="/templates/alunos/imagens/c9.gif"><BR></td>
+                    </tr>
+                    <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                    </tr>
+                    <tr>
+                      <td height="20" bgcolor="#5E8EA2">&nbsp;<a href="/alunos/servicos/senha/" class="menu">alteração de senha</a></td>
+                      <td height="20" width="5"><img src="/templates/alunos/imagens/c9.gif"><BR></td>
+                    </tr>
+                  </table>
+                  <!-- FIM LINKS PRINCIPAIS -->
+                </td>
+                <td width="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                <td>
+                  <!-- CALENDARIO -->
+                  <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="16">
+                        <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="7"><img src="/templates/alunos/imagens/c10.gif"><BR></td>
+                            <td background="/templates/alunos/imagens/c11.gif">
+                              <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"><font color="#ffffff"><b>Dom</b></font></td>
+                                  <td align="center"><font color="#ffffff"><b>Seg</b></font></td>
+                                  <td align="center"><font color="#ffffff"><b>Ter</b></font></td>
+                                  <td align="center"><font color="#ffffff"><b>Qua</b></font></td>
+                                  <td align="center"><font color="#ffffff"><b>Qui</b></font></td>
+                                  <td align="center"><font color="#ffffff"><b>Sex</b></font></td>
+                                  <td align="center"><font color="#ffffff"><b>Sáb</b></font></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width="7"><img src="/templates/alunos/imagens/c12.gif"><BR></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="7" background="/templates/alunos/imagens/c13.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                            <td bgcolor="#FFFFFF" align="center">
+                              <iframe scrolling="no" src="/alunos/foradesala/calendario/EoZm0kYarE9r77aBnCER6AulG5ApXDd4gxBmo_AxJqI" width="209" height="100" frameborder="0" id="calendario" name="calendario">Calendário</iframe>
+                            </td>
+                            <td width="7" background="/templates/alunos/imagens/c14.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="14">
+                        <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="7"><img src="/templates/alunos/imagens/c15.gif"><BR></td>
+                            <td background="/templates/alunos/imagens/c16.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                            <td width="7"><img src="/templates/alunos/imagens/c17.gif"><BR></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- FIM CALENDARIO -->
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- FIM LINHA 02 -->
+        
+        <tr><td height="15"><img src="/templates/alunos/imagens/trans.gif"><BR></td></tr>
+        
+        <!-- LINHA 03 -->
+        <tr>
+          <td>
+            <!-- INFORMATIVO -->
+              <table width="97%" height="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="22">
+                    <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="5"><img src="/templates/alunos/imagens/c18.gif"><BR></td>
+                        <td bgcolor="#B1B1B1" align="center"><font color="#FFFFFF" class="menu"><b>INFORMATIVO DO ALUNO</b></td>
+                        <td width="5"><img src="/templates/alunos/imagens/c19.gif"><BR></td>
+                        <td width="140" background="/templates/alunos/imagens/c20.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                        <td width="9"><img src="/templates/alunos/imagens/c21.gif"><BR></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="3" bgcolor="#B1B1B1"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                        <td>
+                          
+                  <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td height="5"><img src="/templates/imagens/trans.gif"><BR></td>
+                        </tr>
+                <tr>
+                    <td valign="top">
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  
+                      <tr>
+                    <td width="30"><img src="/templates/alunos/imagens/a2.gif"><BR></td>
+                          <td>
+                              <b><a href="/alunos/informacoes/informativo/lC7LvmyqPJeqvklfb9bdkA"><font color="#494949">Comunicado- LICENÇA SAÚDE/ GESTANTE - Benefício de Lei</font></a></b>
+                          </td>
+                     </tr>
+            
+              <tr>
+                <td height="8"><img src="/templates/imagens/trans.gif"><BR></td>
+              </tr>
+              
+                      <tr>
+                    <td width="30"><img src="/templates/alunos/imagens/a2.gif"><BR></td>
+                          <td>
+                              <b><a href="/alunos/informacoes/informativo/nzN6rT0aPlJRQzwL_Y4ZqRv8IH8xdf0ve5CA4Bka3bE"><font color="#494949">Comprovante de Situação Acadêmica</font></a></b>
+                          </td>
+                     </tr>
+            
+                             </table>
+                         </td>
+                </tr>
+            </table>
+                                  </td>
+                        <td width="3" bgcolor="#B1B1B1"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="8">
+                    <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="9"><img src="/templates/alunos/imagens/c22.gif"><BR></td>
+                        <td background="/templates/alunos/imagens/c23.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                        <td width="9"><img src="/templates/alunos/imagens/c24.gif"><BR></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            <!-- FIM INFORMATIVO -->
+          </td>
+        </tr>
+        <!-- FIM LINHA 03 -->
+        
+      </table>
+    </td>
+    
+        <td width="10"><img src="/templates/alunos/imagens/trans.gif" border="0"><BR></td>
+
+        <!-- Pontilhado -->
+        <td width="2" background="/templates/alunos/imagens/ponto.gif" valign="top">
+            <img src="/templates/alunos/imagens/ponto.gif"><BR>
+        </td>
+        <!-- Fim Pontilhado -->
+    
+    <td valign="top">
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+              <tr><td height="15"><img src="/templates/alunos/imagens/trans.gif"><BR></td></tr>
+
+        <!-- MATRICULA ONLINE -->
+        
+                
+        <!-- FIM MATRICULA ONLINE -->
+        
+        <!-- CARTEIRA DE ESTUDANTE -->
+
+                   
+        
+                                
+                <!-- FIM CARTEIRA DE ESTUDANTE -->
+                
+                <!-- BANNERS -->
+        
+                
+
+                <!-- dreamsparks -->
+                                <tr>
+                    <td align="center">
+                      <div style="border: 1px solid #0f3b4d;margin: 0px auto; padding: 0px 0px 0px 0px; width: 192px; background: #fff; text-align: right; align:center;">
+                        <a href="/alunos/dreamspark/" target="_blank"><img src="/arquivos/banners/dreamspark.jpg" border="0"></a><BR>
+                      </div>
+                    </td>
+                </tr>
+               <tr>
+                    <td height="10"><img src="/templates/imagens/trans.gif"><BR></td>
+                   </tr>
+        
+                
+                <!-- Fim dreamsparks -->
+                
+                
+
+                
+                
+                                
+                                                  <tr>
+                      <td align="center">
+                        <div style="border: 1px solid #0f3b4d;margin: 0px auto; padding: 0px 0px 0px 0px; width: 192px; background: #fff; text-align: right; align:center;">
+                            <a href="/redir/9/" target="_self"><img src="/arquivos/banners/banner_requerimento.jpg" border="0"></a><BR>
+                          </div>
+                      </td>
+                  </tr>
+          <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                
+                                  <tr>
+                      <td align="center">
+                        <div style="border: 1px solid #0f3b4d;margin: 0px auto; padding: 0px 0px 0px 0px; width: 192px; background: #fff; text-align: right; align:center;">
+                            <a href="/redir/48/" target="_blank"><img src="/arquivos/banners/8debbf1ec9703fb399e54af04d259e4b.jpg" border="0"></a><BR>
+                          </div>
+                      </td>
+                  </tr>
+          <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                                
+                                  <tr>
+                      <td align="center">
+                        <div style="border: 1px solid #0f3b4d;margin: 0px auto; padding: 0px 0px 0px 0px; width: 192px; background: #fff; text-align: right; align:center;">
+                            <a href="/redir/8/" target="_self"><img src="/arquivos/banners/aluno_pagamento.jpg" border="0"></a><BR>
+                          </div>
+                      </td>
+                  </tr>
+          <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                                
+                                  <tr>
+                      <td align="center">
+                        <div style="border: 1px solid #0f3b4d;margin: 0px auto; padding: 0px 0px 0px 0px; width: 192px; background: #fff; text-align: right; align:center;">
+                            <a href="/redir/57/" target="_blank"><img src="/arquivos/banners/0140817f665221a594eeaca59038b9a4.jpg" border="0"></a><BR>
+                          </div>
+                      </td>
+                  </tr>
+          <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                                
+                                  <tr>
+                      <td align="center">
+                        <div style="border: 1px solid #0f3b4d;margin: 0px auto; padding: 0px 0px 0px 0px; width: 192px; background: #fff; text-align: right; align:center;">
+                            <a href="/redir/10/" target="_blank"><img src="/arquivos/banners/aluno_atividades_culturais.jpg" border="0"></a><BR>
+                          </div>
+                      </td>
+                  </tr>
+          <tr>
+                      <td height="10"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                  </tr>
+                                
+                        
+                                
+                
+                <!-- FIM BANNERS -->
+ 
+                <!-- Guia do Aluno -->
+        
+                <!--tr>
+                    <td height="13"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+                </tr>
+                <tr>
+        -->
+
+                   <td align="center">
+                        <a href="http://www.uniara.com.br/guia_aluno.pdf" target=\"_blank\" ><img src="/templates/alunosmedicina/imagens/guiadoaluno.jpg" border="0"></a><BR>
+                    </td>
+                </tr>
+                <!-- Fim Guia do Aluno -->
+                
+            </table>
+    </td>
+  </tr>
+</table>
+<div id="limite2"></div>                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>                    <!-- Fim Centro da Página -->
+
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="1" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="1">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="3" background="/templates/alunos/imagens/s1.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="2" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td bgcolor="#000000"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="2" bgcolor="#929292"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td width="3" background="/templates/alunos/imagens/s2.gif"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="84">
+          <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="109"><img src="/templates/alunos/imagens/t18.jpg"><BR></td>
+              <td width="20" background="/templates/alunos/imagens/t19.jpg"><img src="/templates/alunos/imagens/trans.gif"><BR></td>
+              <td background="/templates/alunos/imagens/t19.jpg">
+                <font face="verdana" size="1" color="#4c4c4c">
+                  <BR>
+                  <B>Copyright © 2015 Centro Universitário de Araraquara - UNIARA.</B><BR>
+                  Todos os direitos reservados - UV.2.1-WV - HOME-2.1-WV.<BR><BR>&nbsp;
+                </font>
+              </td>
+              <td width="15"><img src="/templates/alunos/imagens/t20.jpg"><BR></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="5">
+          <img src="/templates/alunos/imagens/trans.gif"><BR>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27812250-1']);
+  _gaq.push(['_setDomainName', 'uniara.com.br']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
