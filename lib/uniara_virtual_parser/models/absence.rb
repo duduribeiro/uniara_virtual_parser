@@ -3,9 +3,10 @@ module UniaraVirtualParser
 		class Absence
 			attr_reader :frequency, :total
 
-			def initialize(attribuites={})
-				@frequency = 		:attribuites.fetch :frequency
-				@total = 			:attribuites.fetch :total
+			def initialize(attributes={})
+				@frequency = 		attributes.fetch :frequency, nil
+				@total = 			  attributes.fetch :total, nil
+      end
 		end
 	end
 end
