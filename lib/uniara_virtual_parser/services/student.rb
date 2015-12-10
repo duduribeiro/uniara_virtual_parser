@@ -9,10 +9,9 @@ module UniaraVirtualParser
       private
 
       def parse_student_profile(html)
+        return '' if html.empty?
         doc      = Nokogiri::HTML(html)
-        name = doc.css("b:contains('Bom Dia')").first
-        return '' unless name
-        student  = Models::Student.new(name: name.text.match(/Bom Dia, (.*)/)[1])
+        student  = Models::Student.new(name: name.text.match(/Bo[am] [Dia|Tarde|Noite], (.*)/)[1])
         student
       end
     end
