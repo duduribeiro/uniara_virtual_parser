@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/duduribeiro/uniara_virtual_parser/badge.svg?branch=master&service=github)](https://coveralls.io/github/duduribeiro/uniara_virtual_parser?branch=master)
+
 # UniaraVirtualParser
 
 A gem to parse the Uniara Virtual system.
