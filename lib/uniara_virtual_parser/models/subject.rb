@@ -3,7 +3,7 @@ module UniaraVirtualParser
     class Subject
       attr_reader :name, :first_bimester, :second_bimester, :third_bimester,
                   :fourth_bimester, :substitutive, :average, :recovery, :status,
-	  			  :absences
+	  			        :absences
 
       def initialize(attributes = {})
         @name             = attributes.fetch :name, nil
