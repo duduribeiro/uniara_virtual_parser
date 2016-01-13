@@ -1,4 +1,3 @@
-require 'pry'
 module UniaraVirtualParser
 	module Services
 		module Absences
@@ -16,13 +15,12 @@ module UniaraVirtualParser
 			
 			doc.css('div#conteudo ~table tr').each_with_index do |absence,index|
 				next if index.zero?
-        binding pry
-				absences = Models::Absence.new(
+				absences << Models::Absence.new(
 					frequency: 		absence.css('td:nth-child(2)').text,
 					total:			absence.css('td:nth-child(3)').text
 				)
-				subjects << Models::Subject.new(absence:absences)
-			end
+				end
+				subjects << Models::Subject.new(absences:absences)
 			subjects
 		end
 		end

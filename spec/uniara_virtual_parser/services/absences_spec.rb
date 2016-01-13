@@ -1,6 +1,4 @@
 require 'spec_helper'
-require 'pry'
-
 module UniaraVirtualParser
   module Services
     describe Absences do
@@ -11,9 +9,8 @@ module UniaraVirtualParser
             to_return(status: 200, body: uniara_virtual_fixture("absences.html").read, headers:{})
         end
         it 'fetches the content of uniara virtual and brings the array with absences' do
-          binding.pry
-          expect(subject.first.absences.frequency).to eq "100%"
-          expect(subject.length).to eq 14
+          expect(subject.first.absences.first.frequency).to eq "80h"
+          expect(subject.length).to eq 1
         end
       end
     end
