@@ -5,6 +5,7 @@ module UniaraVirtualParser
     describe Absences do
       describe '.subject' do
         let(:subject) { described_class.absences 'batman' }
+        
         before do
           stub_request(:get,"http://virtual.uniara.com.br/alunos/consultas/faltas").
             to_return(status: 200, body: uniara_virtual_fixture("absences.html").read, headers:{})
