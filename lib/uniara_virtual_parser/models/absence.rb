@@ -5,8 +5,8 @@ module UniaraVirtualParser
 
 			def initialize(attributes={})
 				@frequency = attributes.fetch :frequency, nil
-				@total = 	 attributes.fetch :total, nil
-      		end
+				@total =     attributes.fetch :total, nil
+			end
 		end
 	end
 end
