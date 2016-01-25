@@ -19,8 +19,8 @@ module UniaraVirtualParser
             frequency: absence.css('td:nth-child(2)').text,
             total:     absence.css('td:nth-child(3)').text
           )
-        end
         subjects << Models::Subject.new(absences:absences)
+        end
         subjects
       end
     end
