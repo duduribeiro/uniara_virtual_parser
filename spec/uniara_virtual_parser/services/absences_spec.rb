@@ -10,8 +10,8 @@ module UniaraVirtualParser
         end
 
         it 'fetches the content of uniara virtual and brings the array with absences' do
-          expect(subject.first.absences.first.name).to eq "REDES DE COMPUTADORES"
-          expect(subject.first.absences.first.frequency).to eq "80h"
+          expect(subject.first.absence.name).to eq "REDES DE COMPUTADORES"
+          expect(subject.first.absence.frequency).to eq "80h"
           expect(subject.length).to eq 2
         end
       end
