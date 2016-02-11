@@ -1,3 +1,3 @@
 module UniaraVirtualParser
-  VERSION = '0.1.4'
+  VERSION = '1.1.0'
 end
