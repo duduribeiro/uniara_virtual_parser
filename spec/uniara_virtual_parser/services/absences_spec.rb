@@ -12,8 +12,9 @@ module UniaraVirtualParser
 
         it 'fetches the content of uniara virtual and brings the array with absences' do
           binding.pry
+          expect(subject.first.absences.first.name).to eq "REDES DE COMPUTADORES"
           expect(subject.first.absences.first.frequency).to eq "80h"
-          expect(subject.length).to eq 1
+          expect(subject.length).to eq 2
         end
       end
     end

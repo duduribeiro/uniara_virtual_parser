@@ -16,10 +16,11 @@ module UniaraVirtualParser
         doc.css('div#conteudo ~table tr').each_with_index do |absence,index|
           next if index.zero?
           absences << Models::Absence.new(
+            name:      absence.css('td:nth-child(1)').text,
             frequency: absence.css('td:nth-child(2)').text,
             total:     absence.css('td:nth-child(3)').text
           )
-        subjects << Models::Subject.new(absences:absences)
+          subjects << Models::Subject.new(absences:absences)
         end
         subjects
       end
