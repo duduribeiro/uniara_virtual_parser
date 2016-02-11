@@ -16,8 +16,8 @@ module UniaraVirtualParser
           next if index.zero?
           absences << Models::Absence.new(
             name:      absence.css('td:nth-child(1)').text,
-            frequency: absence.css('td:nth-child(2)').text,
-            total:     absence.css('td:nth-child(3)').text
+            frequency: absence.css('td:nth-child(3)').text,
+            total:     absence.css('td:nth-child(4)').text
           )
         end
         absences
