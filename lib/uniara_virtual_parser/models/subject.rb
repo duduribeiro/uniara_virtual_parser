@@ -2,8 +2,7 @@ module UniaraVirtualParser
   module Models
     class Subject
       attr_reader :name, :first_bimester, :second_bimester, :third_bimester,
-                  :fourth_bimester, :substitutive, :average, :recovery, :status,
-                  :absence
+                  :fourth_bimester, :substitutive, :average, :recovery, :status
                   
       def initialize(attributes = {})
         @name             = attributes.fetch :name, nil
@@ -15,7 +14,6 @@ module UniaraVirtualParser
         @average          = attributes.fetch :average, nil
         @recovery         = attributes.fetch :recovery, nil
         @status           = attributes.fetch :status, nil
-        @absence          = attributes.fetch :absence, nil
       end
     end
   end
