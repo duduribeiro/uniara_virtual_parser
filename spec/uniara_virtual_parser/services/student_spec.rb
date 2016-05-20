@@ -7,6 +7,7 @@ module UniaraVirtualParser
         let(:student) { described_class.student 'theimp' }
         before do
           stub_request(:get, "http://virtual.uniara.com.br/alunos/index/").
+            with(:headers => {'Cookie'=>'PHPSESSID=theimp;'}).
             to_return(:status => 200, body: uniara_virtual_fixture("index.html").read, headers: {})
         end
 

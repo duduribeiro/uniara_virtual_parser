@@ -6,6 +6,7 @@ module UniaraVirtualParser
       let(:body) do
         { 'senha' => 'wayne', 'username' => 'bruce' }
       end
+
       let(:response_headers) do
         {
           'Set-Cookie' => 'PHPSESSID=64sbv9srm10tove94kn7nutfb2;'\
@@ -19,6 +20,7 @@ module UniaraVirtualParser
       before do
         stub_request(:post, 'http://virtual.uniara.com.br/login')
           .with(body: body)
+          .with(:body => {"senha"=>"wayne", "username"=>"bruce"})
           .to_return(status: 200, body: '', headers: response_headers)
       end
 

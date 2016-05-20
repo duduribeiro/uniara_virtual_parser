@@ -6,19 +6,12 @@ module UniaraVirtualParser
   class Client
     ENDPOINT = 'http://virtual.uniara.com.br'
     class << self
-      extend Forwardable
-      def_delegators :client, :post
-
       def get_with_token(path, token)
-        client.get(path) do |request|
-          request.header[:cookie] = "PHPSESSID=#{token};"
-        end
+        HTTParty.get("#{ENDPOINT}#{path}", headers: { "cookie" => "PHPSESSID=#{token};" })
       end
 
-      private
-
-      def client
-        @client ||= Hurley::Client.new ENDPOINT
+      def post(path, body=nil)
+        HTTParty.post("#{ENDPOINT}#{path}", body: body)
       end
     end
   end

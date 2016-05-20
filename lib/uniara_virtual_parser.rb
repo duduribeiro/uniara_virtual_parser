@@ -1,4 +1,4 @@
-require 'hurley'
+require 'httparty'
 require 'nokogiri'
 require 'uniara_virtual_parser/version'
 require 'uniara_virtual_parser/client'
