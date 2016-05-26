@@ -8,7 +8,7 @@ module UniaraVirtualParser
         fail InvalidLogin unless /UVXS233E3=S/.match cookies
         #cookies.match(/PHPSESSID=([^;]*);/)[1]
         # temporary monkey patch for proxy
-        cookies.match(/PHPSESSID=([^,]*);/)[1]
+        cookies.match(/PHPSESSID=([^,]*)/)[1]
       end
     end
   end
