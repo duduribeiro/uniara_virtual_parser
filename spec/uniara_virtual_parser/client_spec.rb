@@ -10,7 +10,7 @@ module UniaraVirtualParser
 
     describe '.post' do
       it 'calls HTTParty and send the post' do
-        expect(HTTParty).to receive(:post)
+        expect(Net::HTTP).to receive(:post_form)
 
         described_class.post '/batman'
       end

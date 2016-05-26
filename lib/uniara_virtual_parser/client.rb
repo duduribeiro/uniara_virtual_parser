@@ -9,7 +9,12 @@ module UniaraVirtualParser
 
     class << self
       def get_with_token(path, token)
-        HTTParty.get("#{ENDPOINT}#{path}", headers: { "cookie" => "PHPSESSID=#{token};" })
+        uri = URI("#{ENDPOINT}#{path}")
+        req = Net::HTTP::Get.new(uri)
+        req['Cookie'] = "PHPSESSID=#{token};"
+        res = Net::HTTP.start(uri.hostname, uri.port) do |http|
+          http.request(req)
+        end
       end
 
       def post(path, body=nil)
