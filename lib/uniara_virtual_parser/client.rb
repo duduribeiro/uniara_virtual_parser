@@ -18,18 +18,18 @@ module UniaraVirtualParser
       end
 
       def post(path, body=nil)
-        uri = URI("#{@alternate_endpoint}#{path}")
+        uri = URI("#{endpoint}#{path}")
         Net::HTTP.post_form(uri, body)
       end
 
       def configure_endpoint(endpoint)
-        @alternate_endpoint = endpoint
+        @endpoint = endpoint
       end
 
       private
 
       def endpoint
-        ENDPOINT
+        @endpoint || ENDPOINT
       end
     end
   end
